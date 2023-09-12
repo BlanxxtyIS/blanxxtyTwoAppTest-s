@@ -14,6 +14,7 @@
 		F45B61AF2AAF1E870070F7D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45B61AE2AAF1E870070F7D1 /* Assets.xcassets */; };
 		F45B61B22AAF1E870070F7D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45B61B02AAF1E870070F7D1 /* LaunchScreen.storyboard */; };
 		F45B61BB2AAFAF170070F7D1 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B61BA2AAFAF170070F7D1 /* ImagesListCell.swift */; };
+		F477629F2AB037B90008BD78 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477629E2AB037B90008BD78 /* SingleImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F45B61B12AAF1E870070F7D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F45B61B32AAF1E870070F7D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F45B61BA2AAFAF170070F7D1 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		F477629E2AB037B90008BD78 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				F45B61A92AAF1E870070F7D1 /* ImagesListViewController.swift */,
 				F45B61BA2AAFAF170070F7D1 /* ImagesListCell.swift */,
+				F477629E2AB037B90008BD78 /* SingleImageViewController.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45B61AA2AAF1E870070F7D1 /* ImagesListViewController.swift in Sources */,
+				F477629F2AB037B90008BD78 /* SingleImageViewController.swift in Sources */,
 				F45B61BB2AAFAF170070F7D1 /* ImagesListCell.swift in Sources */,
 				F45B61A62AAF1E870070F7D1 /* AppDelegate.swift in Sources */,
 				F45B61A82AAF1E870070F7D1 /* SceneDelegate.swift in Sources */,

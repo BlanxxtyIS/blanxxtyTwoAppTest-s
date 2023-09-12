@@ -8,6 +8,7 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
+    private let ShowSingleImageSegueIdentifire = "ShowSingleImage"
     
     @IBOutlet private var tableView: UITableView!
     
@@ -26,8 +27,19 @@ class ImagesListViewController: UIViewController {
         return formatter
     }()
     
+    //Чтобы открывалась нужная нам картинка
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ShowSingleImageSegueIdentifire {
+            let viewController = segue.destination as! SingleImageViewController
+            let indexPath = sender as! IndexPath
+            let image = UIImage(named: photosName[indexPath.row])
+            viewController.image = image
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
+    }
+    
 }
-
 
 //конфигурирует ячейку
 extension ImagesListViewController {
@@ -45,7 +57,6 @@ extension ImagesListViewController {
         cell.likeButton.setImage(likeImage, for: .normal)
     }
 }
-
 
 extension ImagesListViewController: UITableViewDataSource {
     //Количество ячеек в секции таблицы
@@ -65,14 +76,13 @@ extension ImagesListViewController: UITableViewDataSource {
         
         configCell(for: imageListCell, with: indexPath)
         return imageListCell
-        
     }
-    
 }
 
 extension ImagesListViewController: UITableViewDelegate {
     //метод отвечающий за действия, которые будут выполнены при тапе по ячейке таблицы. "Адрес" ячейки в indexPath
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: ShowSingleImageSegueIdentifire, sender: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
