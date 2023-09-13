@@ -9,6 +9,8 @@ import UIKit
 
 final class SingleImageViewController: UIViewController {
     
+    @IBOutlet weak var ScrollView: UIScrollView!
+    
     var image: UIImage! {
         didSet {
             guard isViewLoaded else { return }
@@ -21,5 +23,9 @@ final class SingleImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = image
+    }
+
+    @IBAction func didTapBackButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }
